@@ -50,7 +50,7 @@
                     </li>
                   </ul>
                 </div>
-                <div class="dtc-ns w-60 tc pv4 bg-black-10">
+                <div class="dtc-ns w-60 tc v-mid pv4 bg-black-30">
                    <h1 class="f4 db white">Current Weight</h1>
                    <h2 class="f2 f1-l fw2 white-90 mb0 lh-title">186.3lb</h2>
                    <progress id="progressBar" class="mv3" value="0" max="100"></progress>
