@@ -8,7 +8,7 @@
 <script type="text/javascript">
 module.exports = {
   name: "app"
-};
+}
 </script>
 
 <!-- App specific stylings  -->
