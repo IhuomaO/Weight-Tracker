@@ -1,4 +1,4 @@
-# weight-app
+# weight-tracker
 
 ## Project setup
 ```
