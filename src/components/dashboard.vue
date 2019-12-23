@@ -38,7 +38,7 @@
                       class="flex items-center lh-copy pa3 ph0-l bb b--black-10">
                         <div class="pl3 flex-auto">
                           <span class="f6 db white"></span>
-                          <span class="f6 db white">BMI: 36</span>
+                          <span class="f6 db white">BMI: 36.00</span>
                         </div>
                     </li>
                     <li
@@ -74,7 +74,7 @@
                       class="flex items-center lh-copy pa3 ph0-l bb b--black-10">
                         <div class="pl3 flex-auto">
                           <span class="f6 db white"></span>
-                          <span class="f6 db white">BMI: 23.8</span>
+                          <span class="f6 db white">BMI: 23.80</span>
                         </div>
                     </li>
                     <li
@@ -88,9 +88,9 @@
                 </div>
               </div>
             </div>
-            <a class="f6 no-underline grow dib v-mid bg-blue white ba b--blue ph3 pv2 mb3 mt2" href="/">Add Measurment</a>
+            <a class="f6 no-underline grow dib v-mid bg-blue white ba b--white ph3 pv2 mb3 mt2">Add Measurment</a>
             <span class="dib v-mid ph3 white-70 mb3"></span>
-            <a class="f6 no-underline grow dib v-mid bg-blue white ba b--white ph3 pv2 mb3 mt2" href="">Edit Measurment</a>
+            <a class="f6 no-underline grow dib v-mid bg-blue white ba b--white ph3 pv2 mb3 mt2">Edit Measurment</a>
           </div>
         </div>
       </div> 
