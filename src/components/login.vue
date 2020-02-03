@@ -3,15 +3,15 @@
       <div class="h4"></div>
       <form class ="measure center lh-copy pa3 ph0-l mt3">
           <div class="pa2">
-              <label class="pa1 b f4 fw4 ttu black">User Name</label>
-              <input type="text" name="user" class="w-100 pa2 ba bg-near-white black br2 pv2 f7 fw6" required>
+              <label class="pa1 b f4 fw4 ttu black">User Email</label>
+              <input type="email" name="email" class="w-100 pa2 ba bg-near-white black br2 pv2 f7 fw6" v-model='email' required>
           </div>
           <div class="pa2">
             <label class="pa1 b f4 fw4 ttu black">Password</label>
-            <input  name="password" class="w-100 pa2 ba bg-near-white black br2 pv2 f7 fw6" required>
+            <input  type="password" class="w-100 pa2 ba bg-near-white black br2 pv2 f7 fw6" v-model='password' required>
           </div>
           <span class="w-100">If you dont have an account, create one <router-link to= "/signup">HERE</router-link></span>
-          <button class="db bg-blue pv2 br3 white fw6 f4 pointer no-underline" @click="logIn" router-link to = "/dashboard">
+          <button class="db bg-blue pv2 br3 white fw6 f4 pointer no-underline" @click="logIn">
               Sign In
           </button>
       </form>
@@ -22,23 +22,30 @@
   </section>
 </template>
 
-<script type="text/javascript">
-
+<script>
+import firebase from  'firebase';
 
 export default {
   name: 'login',
-  components: {
-    
-  },
+
   data() {
     return {
-   
+     email: '',
+     password: ''
     }
   },
   methods: {
    logIn: function () {
-      this.$router.replace('dashboard');
-   }
-},
+       firebase.auth().signInWithEmailAndPassword(this.email, this.password).then (
+            // eslint-disable-next-line no-unused-vars
+        function (user) {
+            alert('Well done! You are now connected!!')
+        },
+        function (err) {
+            alert('Oops. ' + err.message)
+        }
+       );
+}
+}
 }
 </script>

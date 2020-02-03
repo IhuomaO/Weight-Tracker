@@ -7,7 +7,7 @@ import App from './App.vue'
 Vue.config.productionTip = false
 
  // Your web app's Firebase configuration
- var firebaseConfig = {
+ const firebaseConfig = {
   apiKey: "AIzaSyAJ_jS8kwXN1uVPJYrWH6RPmzaKg8EoJTQ",
   authDomain: "weight-tracker-2bb28.firebaseapp.com",
   databaseURL: "https://weight-tracker-2bb28.firebaseio.com",
@@ -19,13 +19,12 @@ Vue.config.productionTip = false
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
 
 new Vue ({
   el: "#app",
   router,
   render: h => h(App)
-})
+}).$mount('#app');
 
 
 

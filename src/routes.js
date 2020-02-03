@@ -17,7 +17,7 @@ export const router =  new Router({
     routes: [ 
         {
             name: "dashboard",
-            path: '/',
+            path: '/dashboard',
             component: dashboard,
         },
         {

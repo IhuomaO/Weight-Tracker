@@ -3,17 +3,19 @@
       <div class="h4"></div>
       <form class ="measure center lh-copy pa3 ph0-l mt3">
           <div class="pa2">
-              <label class="pa1 b f4 fw4 ttu black">User Name</label>
-              <input type="text" name="user" class="w-100 pa2 ba bg-near-white black br2 pv2 f7 fw6" required>
+              <label class="pa1 b f4 fw4 ttu black">User Email</label>
+              <input type="email" name="email" class="w-100 pa2 ba bg-near-white black br2 pv2 f7 fw6" v-model="email" required>
           </div>
           <div class="pa2">
             <label class="pa1 b f4 fw4 ttu black">Password</label>
-            <input  name="password" class="w-100 pa2 ba bg-near-white black br2 pv2 f7 fw6" required>
+            <input  type="password" class="w-100 pa2 ba bg-near-white black br2 pv2 f7 fw6"  v-model="password" required>
           </div>
           
-          <button class="bg-blue pv2 br3 white fw6 f4 pointer no-underline" @click="signUp" router-link to = "/dashboard">
+          <button class="bg-blue pv2 br3 white fw6 f4 pointer no-underline" @click="signUp">
               Create Account
           </button>
+          <span class="db w-100 measure centre">Or navigate back to Login page <router-link to= "/login">HERE</router-link></span>
+
       </form>
        <div class="h5"></div>
   
@@ -22,22 +24,29 @@
   </section>
 </template>
 
-<script type="text/javascript">
-
+<script>
+import firebase from 'firebase';
 
 export default {
   name: 'signup',
-  components: {
-    
-  },
+  
   data() {
     return {
-   
+      email: '',
+      password: ''
     }
   },
   methods: {
    signUp: function () {
-      this.$router.replace('login');
+      firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(
+        // eslint-disable-next-line no-unused-vars
+        function (user) {
+            alert('Your account has been created!')
+        },
+        function (err) {
+            alert('Oops. ' + err.message)
+        }
+    );
    }
 },
 }
