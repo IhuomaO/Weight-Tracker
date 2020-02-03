@@ -1,25 +1,25 @@
 <template>
-  <section class="bg-green pa2 ma2 w-100">
+  <section class="bg-near-white pa2 ma2 w-100">
       <div class="h4"></div>
-      <form class ="measure center lh-copy pa3 ph0-l mt3">
-          <div class="pa2">
-              <label class="pa1 b f4 fw4 ttu black">User Email</label>
-              <input type="email" name="email" class="w-100 pa2 ba bg-near-white black br2 pv2 f7 fw6" v-model="email" required>
-          </div>
-          <div class="pa2">
-            <label class="pa1 b f4 fw4 ttu black">Password</label>
-            <input  type="password" class="w-100 pa2 ba bg-near-white black br2 pv2 f7 fw6"  v-model="password" required>
-          </div>
-          
-          <button class="bg-blue pv2 br3 white fw6 f4 pointer no-underline" @click="signUp">
-              Create Account
-          </button>
-          <span class="db w-100 measure centre">Or navigate back to Login page <router-link to= "/login">HERE</router-link></span>
-
-      </form>
+      <article class="pa4 black-80 mw6 center">
+        <form action="sign-up_submit" method="get" accept-charset="utf-8">
+          <fieldset id="sign_up" class="ba b--transparent ph0 mh0">
+            <legend class="ph0 mh0 fw6 clip">Sign Up</legend>
+            <div class="mt3">
+              <label class="db fw4 lh-copy f6" for="email-address">Email address</label>
+              <input class="pa2 input-reset ba bg-transparent w-100 measure" type="email" name="email-address"  id="email-address" v-model="email" required>
+            </div>
+            <div class="mt3">
+              <label class="db fw4 lh-copy f6" for="password">Password</label>
+              <input class="b pa2 input-reset ba bg-transparent" type="password" name="password"  id="password" v-model="password" required>
+            </div>
+          </fieldset>
+          <div class="mt3"><input class="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6" type="submit" value="Create Account" @click="signUp"></div>
+          <span class="mt2 db w-100 measure centre">Or navigate back to Login page <router-link to= "/login">HERE</router-link></span>
+        </form>
+      </article>
        <div class="h5"></div>
-  
-
+        
 
   </section>
 </template>

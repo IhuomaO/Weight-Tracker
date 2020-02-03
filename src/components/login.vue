@@ -1,21 +1,31 @@
 <template>
-  <section class="bg-green pa2 ma2 w-100">
+  <section class="bg-near-white pa2 ma2 w-100">
       <div class="h4"></div>
-      <form class ="measure center lh-copy pa3 ph0-l mt3">
-          <div class="pa2">
-              <label class="pa1 b f4 fw4 ttu black">User Email</label>
-              <input type="email" name="email" class="w-100 pa2 ba bg-near-white black br2 pv2 f7 fw6" v-model='email' required>
-          </div>
-          <div class="pa2">
-            <label class="pa1 b f4 fw4 ttu black">Password</label>
-            <input  type="password" class="w-100 pa2 ba bg-near-white black br2 pv2 f7 fw6" v-model='password' required>
-          </div>
-          <span class="w-100">If you dont have an account, create one <router-link to= "/signup">HERE</router-link></span>
-          <button class="db bg-blue pv2 br3 white fw6 f4 pointer no-underline" @click="logIn">
-              Sign In
-          </button>
-      </form>
-       <div class="h5"></div>
+      <main class="pa4 black-80 mw7 center">
+          <form class="measure center">
+            <fieldset id="sign_up" class="ba b--transparent ph0 mh0">
+              <legend class="f4 fw6 ph0 mh0">Sign In</legend>
+              <div class="mt3">
+                <label class="db fw6 lh-copy f6" for="email-address">Email</label>
+                <input class="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="email" name="email-address"  id="email-address" v-model='email' required>
+              </div>
+              <div class="mv3">
+                <label class="db fw6 lh-copy f6" for="password">Password</label>
+                <input class="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="password" name="password"  id="password" v-model='password' required>
+              </div>
+              <label class="pa0 ma0 lh-copy f6 pointer"><input type="checkbox"> Remember me</label>
+            </fieldset>
+            <div class="">
+              <input class="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit" value="Sign in" @click="logIn">
+            </div>
+            <div class="lh-copy mt3">
+              <p class="f6 link dim black db"><router-link to= "/signup">Sign up</router-link></p>
+              <p class="f6 link dim black db">><router-link to= "/forgot">Forgot your password?</router-link></p>
+            </div>
+          </form>
+      </main>
+      <div class="h5"></div>
+
   
 
 
